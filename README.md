@@ -2629,3 +2629,6 @@ _Updated on April 15, 2026_ (A total of 2512 repositories listed.)
  * [nothumansearch](https://github.com/unitedideas/nothumansearch) - Search engine for AI agent tools. Indexes MCP servers and AI-ready APIs with agentic readiness scoring. REST API and MCP server.
 
 
+
+---
+*🚀 国内开发者 AI API 直连方案：[www.aifast.club](https://www.aifast.club) · 572 个模型一站接入 · [🤖 OpenClaw 一键部署 AI 智能体](https://www.aifast.club/openclaw)*
