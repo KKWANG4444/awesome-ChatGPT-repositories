@@ -47,23 +47,21 @@ Run these two commands inside Claude Code:
 ## The latest additions 🎉
 
 **Prompts**
- * [Vibe-Skills](https://github.com/foryourhealth111-pixel/vibe-skills) - Vibe-Skills is an all-in-one AI skills package. It seamlessly integrates expert-level capabilities and context management into a general-purpose skills package， enabling any AI agent to instantly upgrade its functionality—eliminating the friction of fragme
+ * [typeui](https://github.com/bergside/typeui) - Design skills and UI prompts for agentic tools such as Claude Design, Google Stitch, Codex, Cursor, and other AI tools
 
 
 **CLIs**
- * [claurst](https://github.com/kuberwastaken/claurst) - Agentic Coding for Builders who Ship
- * [agent-deck](https://github.com/asheshgoplani/agent-deck) - Terminal session manager for AI coding agents. One TUI for Claude, Gemini, OpenCode, Codex, and more.
+ * [jcode](https://github.com/1jehuang/jcode) - Coding Agent Harness
+ * [cc-switch](https://github.com/farion1231/cc-switch) - A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI & Hermes Agent. Only official website: ccswitch.io
+ * [claude-tap](https://github.com/liaohch3/claude-tap) - Intercept and inspect Coding Agent API traffic from Claude Code, Codex CLI, Gemini CLI, Cursor CLI, OpenCode, Kimi, Pi, and Hermes in a local trace viewer.
+ * [II-Commons-Skills](https://github.com/intelligent-internet/ii-commons-skills) - Fast, daily-updated skill and CLI for arXiv, PubMed, PMC, and policy retrieval
 
 
-**NLP**
- * [ECC](https://github.com/affaan-m/ecc) - The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.
+**Openai**
+ * [Friday](https://github.com/thesongzhu/friday) - AI personal operations platform for supervised, evidence-backed automation.
 
 
-**Others**
- * [codegraph](https://github.com/colbymchenry/codegraph) - Pre-indexed code knowledge graph for Claude Code, Codex, Cursor, and OpenCode — fewer tokens, fewer tool calls, 100% local
-
-
-_Updated on May 20, 2026_ (A total of 2582 repositories listed.)
+_Updated on May 31, 2026_ (A total of 2598 repositories listed.)
 
 ## Table of contents
 
@@ -178,6 +176,7 @@ _Updated on May 20, 2026_ (A total of 2582 repositories listed.)
  * ✅ [Awesome-GPT-Image-2-API-Prompts](https://github.com/anil-matcha/awesome-gpt-image-2-api-prompts) - ⭐ 1.9k / Curated GPT-Image-2 prompts for the OpenAI API — portraits, posters, UI mockups, game screenshots, character sheets, and more. Ready-to-use prompts for gpt-image-2.
  * 🔥 [awesome-gpt-image-2-prompts](https://github.com/evolinkai/awesome-gpt-image-2-prompts) - ⭐ 14k / Curated GPT-Image-2 prompts fot the Openai API：image examples across portraits, posters, UI mockups, character sheets, and community experiments.
  * [awesome-ai-startups](https://github.com/nowork-studio/awesome-ai-startups) - A curated list of indie-built AI startups — bootstrapped, pre-seed, and angel-funded products only.
+ * [ai-models](https://github.com/i-need-token/ai-models) - Structured YAML catalog of 4,587 AI models across 95 providers — pricing, context windows, modalities, capabilities. First-party data with TypeScript types and Zod validation.
 
 
 ## Prompts
@@ -366,6 +365,7 @@ _Updated on May 20, 2026_ (A total of 2582 repositories listed.)
  * 🔥 [open-codesign](https://github.com/opencoworkai/open-codesign) - ⭐ 5.4k / PDF. Multi-model (Claude, GPT, Gemini, Kimi, GLM, Ollama). BYOK, local-first, MIT.
  * [openpencil](https://github.com/zseven-w/openpencil) - The world's first open-source AI-native vector design tool and the first to feature concurrent Agent Teams. Design-as-Code. Turn prompts into UI directly on the live canvas. A modern alternative to Pencil.
  * [Vibe-Skills](https://github.com/foryourhealth111-pixel/vibe-skills) - Vibe-Skills is an all-in-one AI skills package. It seamlessly integrates expert-level capabilities and context management into a general-purpose skills package， enabling any AI agent to instantly upgrade its functionality—eliminating the friction of fragme
+ * [typeui](https://github.com/bergside/typeui) - Design skills and UI prompts for agentic tools such as Claude Design, Google Stitch, Codex, Cursor, and other AI tools
 
 
 ## Chatbots
@@ -749,6 +749,7 @@ _Updated on May 20, 2026_ (A total of 2582 repositories listed.)
  * [evolution-api](https://github.com/evolution-foundation/evolution-api) - Evolution API is an open-source WhatsApp integration API
  * [agor](https://github.com/preset-io/agor) - Orchestrate Claude Code, Codex, and Gemini sessions on a multiplayer canvas. Manage git worktrees, track AI conversations, and visualize your team's agentic work in real-time.
  * [Hexabot](https://github.com/hexabot-ai/hexabot) - Hexabot v3 is an AI automation platform, combining workflows, actions, agents, and conversational channels in one runtime.
+ * [CrustAI](https://github.com/davesimoes/crustai) - Private, local-first AI assistant with Telegram, Discord, WhatsApp and Slack
 
 
 ## Browser-extensions
@@ -1245,6 +1246,13 @@ _Updated on May 20, 2026_ (A total of 2582 repositories listed.)
  * [openclaw-easy-desktop](https://github.com/openclaw-easy/openclaw-easy-desktop) - OpenClaw Desktop App — No Terminal, No Coding. One-click installer for macOS & Windows.
  * [claurst](https://github.com/kuberwastaken/claurst) - Agentic Coding for Builders who Ship
  * [agent-deck](https://github.com/asheshgoplani/agent-deck) - Terminal session manager for AI coding agents. One TUI for Claude, Gemini, OpenCode, Codex, and more.
+ * [Understand-Anything](https://github.com/lum1104/understand-anything) - Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI, and more.
+ * [muxy](https://github.com/muxy-app/muxy) - Lightweight and Memory efficient terminal for Mac built with SwiftUI and libghostty
+ * [codeg](https://github.com/xintaofei/codeg) - Collaborative multi-agent AI coding workspace: aggregate sessions from Claude Code, Codex, Gemini CLI, etc. Desktop app, self-hosted server, or Docker.
+ * [jcode](https://github.com/1jehuang/jcode) - Coding Agent Harness
+ * [cc-switch](https://github.com/farion1231/cc-switch) - A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI & Hermes Agent. Only official website: ccswitch.io
+ * [claude-tap](https://github.com/liaohch3/claude-tap) - Intercept and inspect Coding Agent API traffic from Claude Code, Codex CLI, Gemini CLI, Cursor CLI, OpenCode, Kimi, Pi, and Hermes in a local trace viewer.
+ * [II-Commons-Skills](https://github.com/intelligent-internet/ii-commons-skills) - Fast, daily-updated skill and CLI for arXiv, PubMed, PMC, and policy retrieval
 
 
 ## Reimplementations
@@ -2259,6 +2267,8 @@ _Updated on May 20, 2026_ (A total of 2582 repositories listed.)
  * 🔥 [WindsurfAPI](https://github.com/dwgx/windsurfapi) - ⭐ 2.1k / Windsurf-to-OpenAI compatible API proxy
  * ⚠️ [chatgpt-action](https://github.com/voidly-ai/chatgpt-action) - ⭐ 0 / OpenAI GPT Action for querying real-time censorship data — 126+ countries, 5,700+ incidents
  * 🔥 [chatgpt2api](https://github.com/basketikun/chatgpt2api) - ⭐ 2.2k / Reverse implementation of the ChatGPT official website interface protocol, supporting registration machine to maintain number pool quota, supporting GPT-Image-2 model, text model, compatible with multiple OpenAI interface protocols, online batch generation of images, number pool management, supporting import of CPA, sub2api number pool, supporting integration with Cherry Studio, New Api and other software.
+ * [codex-desktop-linux](https://github.com/ilysenko/codex-desktop-linux) - Run OpenAI Codex Desktop on Linux - automated installer
+ * [Friday](https://github.com/thesongzhu/friday) - AI personal operations platform for supervised, evidence-backed automation.
 
 
 ## Others
@@ -2720,5 +2730,9 @@ _Updated on May 20, 2026_ (A total of 2582 repositories listed.)
  * [suppr-skills](https://github.com/wilddatax/suppr-skills) - Superpower Literature (Suppr) AI Document Translation and Academic Literature Retrieval Skills Collection
  * [agentsview](https://github.com/wesm/agentsview) - Local-first session intelligence and analytics for coding agents, supporting Claude Code, Codex, and 14 other agents. Also: 100x faster replacement for ccusage!
  * [codegraph](https://github.com/colbymchenry/codegraph) - Pre-indexed code knowledge graph for Claude Code, Codex, Cursor, and OpenCode — fewer tokens, fewer tool calls, 100% local
+ * [codex2api](https://github.com/james-6-23/codex2api) - Codex2API 是一个基于 Go + Gin + React/Vite 的 Codex 反向代理与管理后台项目
+ * [takt](https://github.com/nrslib/takt) - TAKT Agent Koordination Topology - Define how AI agents coordinate, where humans intervene, and what gets recorded — in YAML
+ * [ccx](https://github.com/benedictking/ccx) - Claude / Codex / Gemini API Proxy - CCX
+ * [helmor](https://github.com/dohooo/helmor) - Open-source local workbench for multi-agent software development.
 
 

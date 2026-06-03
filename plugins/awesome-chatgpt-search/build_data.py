@@ -122,10 +122,13 @@ def to_compact(url: str, entry: dict, category: str) -> dict:
 
 
 def write_json(path: Path, records: list) -> None:
-    path.write_text(
-        json.dumps(records, ensure_ascii=False, separators=(",", ":")),
-        encoding="utf-8",
+    # One record per line. The file stays a valid JSON array, but the layout
+    # lets the search skill `grep` for matching repos and read only those lines
+    # instead of loading whole category files into context (far fewer tokens).
+    body = ",\n".join(
+        json.dumps(r, ensure_ascii=False, separators=(",", ":")) for r in records
     )
+    path.write_text(f"[\n{body}\n]\n", encoding="utf-8")
     kb = path.stat().st_size / 1024
     print(f"  {path.name}: {len(records)} entries  ({kb:.0f} KB)")
 
@@ -136,6 +139,7 @@ def main() -> None:
     with SOURCE.open(encoding="utf-8") as f:
         data = json.load(f)
 
+    cat_counts: dict[str, int] = {}
     for category, entries in data["contents"].items():
         slug = SLUG.get(category)
         if not slug:
@@ -146,6 +150,7 @@ def main() -> None:
             to_compact(url, entry, category)
             for url, entry in entries.items()
         ]
+        cat_counts[category] = len(records)
 
         if len(records) > SPLIT_THRESHOLD:
             mid = math.ceil(len(records) / 2)
@@ -155,6 +160,18 @@ def main() -> None:
             write_json(OUT_DIR / f"{slug}.json", records)
 
     print("\nDone.")
+
+    # Category-count table — copy into README.md, SKILL.md and awesome-chatgpt.md
+    # whenever the data is regenerated, so the `list categories` numbers stay accurate.
+    print("\nCategory counts (sync into the docs' count tables):")
+    print("| Category | Count |")
+    print("|----------|-------|")
+    total = 0
+    for category in SLUG:
+        n = cat_counts.get(category, 0)
+        total += n
+        print(f"| {category} | {n} |")
+    print(f"| **Total** | **{total:,}** |")
 
 
 if __name__ == "__main__":

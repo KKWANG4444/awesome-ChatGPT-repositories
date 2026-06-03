@@ -32,17 +32,17 @@ The data descriptions are in **English**. Convert non-English queries to English
 
 - **Aim for 3–6 keywords.** Too few miss items; too many inflate low-quality partial matches.
 
-### Step 2 — Select which data files to read
+### Step 2 — Search the data files with grep
 
-Data files are in `plugins/awesome-chatgpt-search/data/` (relative to repo root / PWD).
+Data files are in `plugins/awesome-chatgpt-search/data/` (relative to repo root / PWD). Each file is a JSON array with **one repo record per line**, so `grep` can pull only the matching repos instead of loading whole files (much lower token cost).
 
 | Category | File(s) |
 |----------|---------|
 | Awesome-lists | `repos-awesome-lists.json` |
 | Prompts | `repos-prompts.json` |
 | Chatbots | `repos-chatbots-a.json`, `repos-chatbots-b.json` |
-| Browser-extensions | `repos-browser-extensions.json` |
-| CLIs | `repos-clis.json` |
+| Browser-extensions | `repos-browser-extensions-a.json`, `repos-browser-extensions-b.json` |
+| CLIs | `repos-clis-a.json`, `repos-clis-b.json` |
 | Reimplementations | `repos-reimplementations.json` |
 | Tutorials | `repos-tutorials.json` |
 | NLP | `repos-nlp-a.json`, `repos-nlp-b.json` |
@@ -51,11 +51,11 @@ Data files are in `plugins/awesome-chatgpt-search/data/` (relative to repo root 
 | Openai | `repos-openai-a.json`, `repos-openai-b.json` |
 | Others | `repos-others-a.json`, `repos-others-b.json` |
 
-Each file is a JSON array of items with: `u` (URL), `n` (name), `d` (description), `c` (category), `l` (language, optional), `t` (topics comma-separated, optional), `sc` (quality score 0–8).
+Record fields: `u` (URL), `n` (name), `d` (description), `c` (category), `l` (language, optional), `t` (topics comma-separated, optional), `sc` (quality score 0–8), `st` (star count, optional), `ns` (normalized star score 0–10, optional).
 
-**Which files to read — read only what the query needs:**
+**Which files to search — pick only what the query needs:**
 
-**Rule A — category: specified:** read only that category's file(s).
+**Rule A — category: specified:** grep only that category's file(s). Match the name **case-insensitively** and accept common variants (`cli`/`clis` → CLIs, `chatbot`/`bot` → Chatbots, `browser`/`extension` → Browser-extensions, `prompt` → Prompts, `tutorial` → Tutorials, `reimpl` → Reimplementations, `awesome`/`lists` → Awesome-lists). If it matches no category, fall back to keyword routing (Rule C).
 
 **Rule B — list categories:** no file reads, jump straight to the output.
 
@@ -63,11 +63,11 @@ Each file is a JSON array of items with: `u` (URL), `n` (name), `d` (description
 
 Use the **English keywords from Step 1** (not the original query text) for routing.
 For each row below, check if any English keyword contains or matches the listed terms (case-insensitive substring).
-Read that row's files only if there is a match.
+Use that row's files only if there is a match.
 Collect all matching rows' files (deduplicated).
 If **no rows match**, default to: `repos-chatbots-a.json`, `repos-nlp-a.json`, `repos-openai-a.json`, `repos-others-a.json`.
 
-| If query mentions… | Read these files |
+| If query mentions… | Search these files |
 |--------------------|-----------------|
 | chatbot, bot, chat, dialog, conversation, assistant, discord, slack | repos-chatbots-a.json, repos-chatbots-b.json |
 | RAG, retrieval, vector, embed, semantic, FAISS, Chroma, Pinecone, similarity, index | repos-nlp-a.json, repos-nlp-b.json, repos-langchain.json |
@@ -88,9 +88,19 @@ If **no rows match**, default to: `repos-chatbots-a.json`, `repos-nlp-a.json`, `
 | image, vision, multimodal, DALL-E, Stable Diffusion, drawing | repos-others-a.json, repos-nlp-a.json |
 | voice, speech, audio, TTS, ASR, Whisper | repos-others-a.json, repos-nlp-b.json |
 
+**Then grep the selected files for the keywords — do NOT Read whole files.** Use `-F` (literal substring, safe for keywords like `c++`/`.net`) with one `-e` per keyword, and cap the output:
+```
+D=plugins/awesome-chatgpt-search/data
+grep -ihF -e keyword1 -e keyword2 -e keyword3 "$D"/repos-nlp-a.json "$D"/repos-nlp-b.json | head -120
+```
+Each output line is one matching repo record (JSON object) — score those in Step 4. If grep returns fewer than ~8 lines, broaden the keywords and re-run.
+
 ### Step 3 — Filter by language (if `language:<lang>` given)
 
-Keep only items where `l` matches (case-insensitive).
+Append a language filter to the grep pipeline (case-insensitive; the `l` field holds the language):
+```
+grep -ihF -e keyword1 -e keyword2 "$D"/repos-clis-a.json "$D"/repos-clis-b.json | grep -iF '"l":"<lang>"' | head -120
+```
 
 ### Step 4 — Score candidates
 
@@ -137,18 +147,19 @@ For `list categories`, present:
 
 | Category | Count |
 |----------|-------|
-| Awesome-lists | 95 |
-| Prompts | 182 |
-| Chatbots | 375 |
-| Browser-extensions | 250 |
-| CLIs | 227 |
+| Awesome-lists | 96 |
+| Prompts | 184 |
+| Chatbots | 379 |
+| Browser-extensions | 252 |
+| CLIs | 240 |
 | Reimplementations | 42 |
 | Tutorials | 21 |
-| NLP | 405 |
+| NLP | 412 |
 | Langchain | 178 |
 | Unity | 17 |
 | Openai | 325 |
-| Others | 451 |
+| Others | 461 |
+| **Total** | **2,607** |
 ```
 
 If no results, suggest alternate keywords and link to https://github.com/taishi-i/awesome-ChatGPT-repositories
