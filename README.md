@@ -6,7 +6,7 @@
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
 [![RRs](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/taishi-i/awesome-ChatGPT-repositories/pulls)
 
-> **ChatGPT 项目接入参考：** 对支持自定义 API Key/Base URL 的项目，可使用 [www.aifast.club](https://www.aifast.club) 统一配置 OpenAI 兼容接口。
+> **运行这些 ChatGPT 项目：** 如果项目支持自定义 Base URL，可直接套用这份 [OpenAI SDK 配置指南](https://github.com/KKWANG4444/ai-api-proxy-china-guide)，兼容接口示例使用 [www.aifast.club](https://www.aifast.club)。
 
 A curated list of resources dedicated to open source GitHub repositories related to [ChatGPT](https://openai.com/blog/chatgpt).
 A tool for searching these repositories is [available](https://huggingface.co/spaces/taishi-i/awesome-ChatGPT-repositories-search) on Hugging Face Spaces.
@@ -2742,4 +2742,4 @@ collaborate to build and iterate on AI features.
 
 
 ---
-*API 接入参考：[www.aifast.club](https://www.aifast.club) · [配置指南](https://github.com/KKWANG4444/ai-api-proxy-china-guide)*
+*接入参考：[OpenAI 兼容配置指南](https://github.com/KKWANG4444/ai-api-proxy-china-guide) · [模型状态](https://kkwang4444.github.io/api-status/) · [示例端点](https://www.aifast.club)*

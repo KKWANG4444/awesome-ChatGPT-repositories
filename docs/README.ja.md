@@ -2730,5 +2730,3 @@ _Updated on May 31, 2026_ (A total of 2598 repositories listed.)
  * [takt](https://github.com/nrslib/takt) - TAKTエージェントコーディネーショントポロジー - AIエージェントがどのように調整され、人間がどこで介入し、何が記録されるかを定義する — YAMLで
  * [ccx](https://github.com/benedictking/ccx) - クロード / コデックス / ジェミニAPIプロキシ - CCX
  * [helmor](https://github.com/dohooo/helmor) - マルチエージェントソフトウェア開発のためのオープンソースのローカルワークベンチ。
-
-

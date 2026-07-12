@@ -2730,5 +2730,3 @@ _Updated on May 31, 2026_ (A total of 2598 repositories listed.)
  * [takt](https://github.com/nrslib/takt) - TAKT代理協調拓撲 - 定義AI代理如何協調，人類如何介入，以及什麼被記錄 - 在YAML中
  * [ccx](https://github.com/benedictking/ccx) - 克勞德 / 密碼 / 雙子座 API 代理 - CCX
  * [helmor](https://github.com/dohooo/helmor) - 開源本地工作臺，用於多智能體軟件開發。
-
-
