@@ -6,7 +6,7 @@
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
 [![RRs](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/taishi-i/awesome-ChatGPT-repositories/pulls)
 
-> 🇨🇳 **Need direct access to 572 AI models in China?** → [**www.aifast.club**](https://www.aifast.club) · One Key, all models · No VPN · WeChat/Alipay
+> **ChatGPT 项目接入参考：** 对支持自定义 API Key/Base URL 的项目，可使用 [www.aifast.club](https://www.aifast.club) 统一配置 OpenAI 兼容接口。
 
 A curated list of resources dedicated to open source GitHub repositories related to [ChatGPT](https://openai.com/blog/chatgpt).
 A tool for searching these repositories is [available](https://huggingface.co/spaces/taishi-i/awesome-ChatGPT-repositories-search) on Hugging Face Spaces.
@@ -1886,7 +1886,8 @@ _Updated on May 31, 2026_ (A total of 2598 repositories listed.)
  * ⚠️ [autoview](https://github.com/wrtnlabs/autoview) - ⭐ repo not found / Automatic view component renderer by AI agent
  * 🔥 [helix](https://github.com/helixml/helix) - ⭐ 774 / ♾️ Helix is a private GenAI stack for building AI applications with declarative pipelines, knowledge (RAG), API bindings, and first-class testing.
  * 🔥 [openinference](https://github.com/arize-ai/openinference) - ⭐ 959 / OpenTelemetry Instrumentation for AI Observability
- * 💤 [WorkflowAI](https://github.com/workflowai/workflowai) - ⭐ 471 / WorkflowAI is an open-source platform where product and engineering teams  collaborate to build and iterate on AI features.
+ * 💤 [WorkflowAI](https://github.com/workflowai/workflowai) - ⭐ 471 / WorkflowAI is an open-source platform where product and engineering teams 
+collaborate to build and iterate on AI features.
  * 🔥 [company-research-agent](https://github.com/guy-hartstein/company-research-agent) - ⭐ 1.9k / An agentic company research tool powered by LangGraph and Tavily that conducts deep diligence on companies using a multi-agent framework. It leverages Google's Gemini 2.0 Flash and OpenAI's GPT-4.1 on the backend for inference.
  * ⚠️ [zen-mcp-server](https://github.com/beehiveinnovations/zen-mcp-server) - ⭐ 12k / All Of The Above] working as one.
  * 💤 [llm-ui](https://github.com/richardgill/llm-ui) - ⭐ 1.7k / The React library for LLMs
@@ -2741,4 +2742,4 @@ _Updated on May 31, 2026_ (A total of 2598 repositories listed.)
 
 
 ---
-*🚀 国内开发者 AI API 直连方案：[www.aifast.club](https://www.aifast.club) · 572 个模型一站接入 · [🤖 OpenClaw 一键部署 AI 智能体](https://www.aifast.club/openclaw)*
+*API 接入参考：[www.aifast.club](https://www.aifast.club) · [配置指南](https://github.com/KKWANG4444/ai-api-proxy-china-guide)*
